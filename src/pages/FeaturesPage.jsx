@@ -106,15 +106,15 @@ const FeaturesPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 via-white to-pink-50">
+      <section className="py-20 bg-gradient-to-br from-red-50 via-white to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-block px-4 py-2 bg-red-100 rounded-full text-red-600 font-semibold mb-6">
+          <div className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-600 dark:text-red-400 font-semibold mb-6">
             ⚡ Revolutionary Fashion Delivery
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
             Why FashionFlash is Different
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto transition-colors duration-300">
             We are not just another delivery app. We are revolutionizing how India shops for fashion 
             by combining the speed of quick commerce with the authenticity of local stores.
           </p>
@@ -122,21 +122,21 @@ const FeaturesPage = () => {
       </section>
 
       {/* Customer Features */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">For Fashion Lovers</h2>
-            <p className="text-gray-600 text-lg">Everything you need for the perfect shopping experience</p>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">For Fashion Lovers</h2>
+            <p className="text-gray-600 dark:text-gray-400 text-lg transition-colors duration-300">Everything you need for the perfect shopping experience</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {customerFeatures.map((feature, idx) => (
-              <div key={idx} className="bg-white border-2 border-gray-100 rounded-3xl p-8 hover:border-red-500 hover:shadow-2xl transition-all duration-300">
+              <div key={idx} className="bg-white dark:bg-gray-800 border-2 border-gray-100 dark:border-gray-700 rounded-3xl p-8 hover:border-red-500 dark:hover:border-red-400 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 transition-colors duration-300">{feature.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed transition-colors duration-300">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -144,19 +144,19 @@ const FeaturesPage = () => {
       </section>
 
       {/* How It Helps */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Perfect For Every Situation</h2>
-            <p className="text-gray-600 text-lg">Real solutions for real fashion needs</p>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">Perfect For Every Situation</h2>
+            <p className="text-gray-600 dark:text-gray-400 text-lg transition-colors duration-300">Real solutions for real fashion needs</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {howItHelps.map((item, idx) => (
-              <div key={idx} className="bg-white rounded-3xl p-8 text-center hover:shadow-xl transition">
+              <div key={idx} className="bg-white dark:bg-gray-800 rounded-3xl p-8 text-center hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:scale-105">
                 <div className="text-6xl mb-4">{item.emoji}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 transition-colors duration-300">{item.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -164,26 +164,26 @@ const FeaturesPage = () => {
       </section>
 
       {/* Seller Benefits */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">For Store Partners</h2>
-            <p className="text-gray-600 text-lg">Grow your business without the hassle</p>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">For Store Partners</h2>
+            <p className="text-gray-600 dark:text-gray-300 text-lg transition-colors duration-300">Grow your business without the hassle</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sellerBenefits.map((benefit, idx) => (
-              <div key={idx} className="bg-white rounded-3xl p-8 hover:shadow-2xl transition">
+              <div key={idx} className="bg-white dark:bg-gray-800 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:scale-105">
                 <div className="flex items-start justify-between mb-6">
-                  <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <benefit.icon className="w-7 h-7 text-blue-600" />
+                  <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                    <benefit.icon className="w-7 h-7 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <div className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-bold">
+                  <div className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full text-sm font-bold">
                     {benefit.stat}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 transition-colors duration-300">{benefit.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">{benefit.desc}</p>
               </div>
             ))}
           </div>
@@ -191,10 +191,10 @@ const FeaturesPage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-red-500 via-pink-500 to-purple-500 text-white">
+      <section className="py-20 bg-gradient-to-br from-red-500 via-pink-500 to-purple-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Trusted by Thousands</h2>
+            <h2 className="text-4xl font-bold mb-4 text-white">Trusted by Thousands</h2>
             <p className="text-xl text-white text-opacity-90">Real numbers, real impact</p>
           </div>
 
@@ -206,7 +206,7 @@ const FeaturesPage = () => {
               { value: '15 min', label: 'Average Delivery' }
             ].map((stat, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-5xl font-bold mb-2">{stat.value}</div>
+                <div className="text-5xl font-bold mb-2 text-white">{stat.value}</div>
                 <div className="text-lg text-white text-opacity-90">{stat.label}</div>
               </div>
             ))}
@@ -215,19 +215,19 @@ const FeaturesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
             Ready to Experience Fast Fashion?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 transition-colors duration-300">
             Join thousands who have already discovered the future of fashion shopping
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#download" className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:shadow-lg transition font-semibold">
+            <a href="#download" className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200 font-semibold">
               Download App
             </a>
-            <a href="#/partner" className="px-8 py-4 bg-white border-2 border-gray-300 text-gray-900 rounded-xl hover:border-red-500 transition font-semibold">
+            <a href="#/partner" className="px-8 py-4 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-xl hover:border-red-500 dark:hover:border-red-400 hover:scale-105 transition-all duration-200 font-semibold">
               Partner With Us
             </a>
           </div>

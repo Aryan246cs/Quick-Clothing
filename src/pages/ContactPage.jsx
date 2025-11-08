@@ -22,11 +22,11 @@ const ContactPage = () => {
 
   return (
     <>
-      <section className="py-20 bg-gradient-to-br from-red-50 to-pink-50">
+      <section className="py-20 bg-gradient-to-br from-red-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">Contact Us</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">Contact Us</h1>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto transition-colors duration-300">
               Have questions? We'd love to hear from you. Send us a message and we'll 
               respond as soon as possible.
             </p>
@@ -35,38 +35,38 @@ const ContactPage = () => {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
-              <div className="bg-white rounded-3xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
+              <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">Get in Touch</h3>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-red-500" />
+                    <div className="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-red-500 dark:text-red-400" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                      <p className="text-gray-600">support@fashionflash.com</p>
-                      <p className="text-gray-600">partners@fashionflash.com</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1 transition-colors duration-300">Email</h4>
+                      <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">support@fashionflash.com</p>
+                      <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">partners@fashionflash.com</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-red-500" />
+                    <div className="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-red-500 dark:text-red-400" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                      <p className="text-gray-600">+91 XXXXX XXXXX</p>
-                      <p className="text-sm text-gray-500">Mon-Sat, 9AM-6PM IST</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1 transition-colors duration-300">Phone</h4>
+                      <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">+91 XXXXX XXXXX</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-500 transition-colors duration-300">Mon-Sat, 9AM-6PM IST</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-red-500" />
+                    <div className="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-red-500 dark:text-red-400" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Office</h4>
-                      <p className="text-gray-600">
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1 transition-colors duration-300">Office</h4>
+                      <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
                         123 Fashion Street,<br />
                         Connaught Place, New Delhi<br />
                         Delhi 110001, India
@@ -75,13 +75,13 @@ const ContactPage = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <MessageSquare className="w-6 h-6 text-red-500" />
+                    <div className="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <MessageSquare className="w-6 h-6 text-red-500 dark:text-red-400" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Live Chat</h4>
-                      <p className="text-gray-600">Available 9AM-9PM</p>
-                      <button className="mt-2 text-red-500 font-semibold hover:text-red-600">
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1 transition-colors duration-300">Live Chat</h4>
+                      <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">Available 9AM-9PM</p>
+                      <button className="mt-2 text-red-500 dark:text-red-400 font-semibold hover:text-red-600 dark:hover:text-red-500 transition-colors duration-200">
                         Start Chat →
                       </button>
                     </div>
@@ -89,14 +89,14 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-3xl p-8 shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Follow Us</h3>
+              <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">Follow Us</h3>
                 <div className="flex space-x-4">
                   {[Facebook, Twitter, Instagram, Linkedin, Youtube].map((Social, idx) => (
                     <a 
                       key={idx} 
                       href="#" 
-                      className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-red-500 hover:to-pink-500 hover:text-white transition-all"
+                      className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-red-500 hover:to-pink-500 hover:text-white hover:scale-110 transition-all duration-300"
                     >
                       <Social className="w-6 h-6" />
                     </a>
@@ -106,18 +106,18 @@ const ContactPage = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white rounded-3xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+            <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 transition-colors duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">Send us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
                     Your Name *
                   </label>
                   <input
                     type="text"
                     name="name"
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-red-500 outline-none transition"
+                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-700 rounded-xl focus:border-red-500 dark:focus:border-red-400 outline-none transition bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                     placeholder="John Doe"
                     value={formData.name}
                     onChange={handleChange}
@@ -125,14 +125,14 @@ const ContactPage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
                     Email *
                   </label>
                   <input
                     type="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-red-500 outline-none transition"
+                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-700 rounded-xl focus:border-red-500 dark:focus:border-red-400 outline-none transition bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                     placeholder="email@example.com"
                     value={formData.email}
                     onChange={handleChange}
@@ -140,13 +140,13 @@ const ContactPage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
                     Phone
                   </label>
                   <input
                     type="tel"
                     name="phone"
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-red-500 outline-none transition"
+                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-700 rounded-xl focus:border-red-500 dark:focus:border-red-400 outline-none transition bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                     placeholder="+91 XXXXX XXXXX"
                     value={formData.phone}
                     onChange={handleChange}
@@ -154,14 +154,14 @@ const ContactPage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
                     Message *
                   </label>
                   <textarea
                     name="message"
                     required
                     rows="5"
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-red-500 outline-none transition resize-none"
+                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-700 rounded-xl focus:border-red-500 dark:focus:border-red-400 outline-none transition resize-none bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                     placeholder="How can we help you?"
                     value={formData.message}
                     onChange={handleChange}
@@ -170,7 +170,7 @@ const ContactPage = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:shadow-lg transition font-semibold flex items-center justify-center space-x-2"
+                  className="w-full py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200 font-semibold flex items-center justify-center space-x-2"
                 >
                   <span>Send Message</span>
                   <ArrowRight className="w-5 h-5" />

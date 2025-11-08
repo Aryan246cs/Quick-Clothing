@@ -100,7 +100,7 @@ const FAQPage = () => {
 
   const renderFAQSection = (title, category, questions) => (
     <div className="mb-12">
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">{title}</h2>
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">{title}</h2>
       <div className="space-y-4">
         {questions.map((faq, idx) => {
           const key = `${category}-${idx}`;
@@ -108,21 +108,21 @@ const FAQPage = () => {
           return (
             <div 
               key={idx}
-              className="bg-white rounded-2xl border-2 border-gray-100 overflow-hidden hover:border-red-500 transition"
+              className="bg-white dark:bg-gray-800 rounded-2xl border-2 border-gray-100 dark:border-gray-700 overflow-hidden hover:border-red-500 dark:hover:border-red-400 transition-all duration-300"
             >
               <button
                 onClick={() => toggleFAQ(category, idx)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left"
               >
-                <span className="font-semibold text-gray-900 pr-4">{faq.q}</span>
+                <span className="font-semibold text-gray-900 dark:text-white pr-4 transition-colors duration-300">{faq.q}</span>
                 {isOpen ? (
-                  <ChevronUp className="w-5 h-5 text-red-500 flex-shrink-0" />
+                  <ChevronUp className="w-5 h-5 text-red-500 dark:text-red-400 flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                  <ChevronDown className="w-5 h-5 text-gray-400 dark:text-gray-500 flex-shrink-0" />
                 )}
               </button>
               {isOpen && (
-                <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                <div className="px-6 pb-5 text-gray-600 dark:text-gray-400 leading-relaxed border-t border-gray-100 dark:border-gray-700 pt-4 transition-colors duration-300">
                   {faq.a}
                 </div>
               )}
@@ -136,22 +136,22 @@ const FAQPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 to-pink-50">
+      <section className="py-20 bg-gradient-to-br from-red-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
             <HelpCircle className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto transition-colors duration-300">
             Got questions? We have got answers. Find everything you need to know about FashionFlash.
           </p>
         </div>
       </section>
 
       {/* FAQ Sections */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {renderFAQSection('For Customers', 'customers', faqs.customers)}
           {renderFAQSection('For Store Partners', 'sellers', faqs.sellers)}
@@ -160,24 +160,24 @@ const FAQPage = () => {
       </section>
 
       {/* Still Have Questions */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
             Still Have Questions?
           </h2>
-          <p className="text-gray-600 mb-8">
+          <p className="text-gray-600 dark:text-gray-400 mb-8 transition-colors duration-300">
             Cannot find the answer you are looking for? Our support team is here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="#/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:shadow-lg transition font-semibold"
+              className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200 font-semibold"
             >
               Contact Support
             </a>
             <a 
               href="mailto:support@fashionflash.com" 
-              className="px-8 py-4 bg-white border-2 border-gray-300 text-gray-900 rounded-xl hover:border-red-500 transition font-semibold"
+              className="px-8 py-4 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-xl hover:border-red-500 dark:hover:border-red-400 hover:scale-105 transition-all duration-200 font-semibold"
             >
               Email Us
             </a>

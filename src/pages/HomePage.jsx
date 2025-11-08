@@ -87,39 +87,39 @@ const HomePage = () => {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-red-50 via-white to-pink-50">
+      {/* Hero Section
+      <section className="relative overflow-hidden bg-gradient-to-br from-red-50 via-white to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white rounded-full shadow-md border border-red-100">
+              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-md border border-red-100 dark:border-gray-700 transition-colors duration-300">
                 <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-semibold text-gray-700">Delivering Fashion Since 2025</span>
+                <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Delivering Fashion Since 2025</span>
               </div>
 
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                <span className="text-gray-900">Fashion at</span>
+                <span className="text-gray-900 dark:text-white transition-colors duration-300">Fashion at</span>
                 <br />
                 <span className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
                   Lightning Speed
                 </span>
               </h1>
 
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Get your favorite clothes from neighborhood stores delivered to your doorstep in just <span className="font-bold text-red-500">20 minutes</span>.
+              <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed transition-colors duration-300">
+                Get your favorite clothes from neighborhood stores delivered to your doorstep in just <span className="font-bold text-red-500 dark:text-red-400">20 minutes</span>.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:shadow-lg transition font-semibold text-center flex items-center justify-center space-x-2"
+                  className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200 font-semibold text-center flex items-center justify-center space-x-2"
                 >
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
                   to="/partner"
-                  className="px-8 py-4 bg-white border-2 border-gray-300 text-gray-900 rounded-xl hover:border-red-500 transition font-semibold text-center"
+                  className="px-8 py-4 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-xl hover:border-red-500 dark:hover:border-red-400 hover:scale-105 transition-all duration-200 font-semibold text-center"
                 >
                   Partner With Us
                 </Link>
@@ -132,8 +132,8 @@ const HomePage = () => {
                   { value: '15 min', label: 'Avg Delivery' }
                 ].map((stat, idx) => (
                   <div key={idx} className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-gray-900">{stat.value}</div>
-                    <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
+                    <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">{stat.value}</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 mt-1 transition-colors duration-300">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -149,47 +149,129 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      {/* Hero Section */}
+<section className="relative bg-gradient-to-br from-red-500 via-pink-500 to-purple-600 text-white overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* Text Content */}
+      <div className="space-y-6">
+        <div className="inline-flex items-center space-x-3 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full">
+          <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+          <span className="font-semibold text-white">Delivering Fashion at Lightning Speed</span>
+        </div>
+
+        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
+          <span className="block">Your Fashion,</span>
+          <span className="block bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-red-400 to-pink-500">
+            Delivered Instantly
+          </span>
+        </h1>
+
+        <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+          Get your favorite outfits from local stores in just{" "}
+          <span className="font-bold text-yellow-300">20 minutes</span>. Style delivered, no waiting.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link
+            to="/shop"
+            className="px-8 py-4 bg-yellow-400 text-gray-900 font-semibold rounded-xl shadow-lg hover:scale-105 transition-transform flex items-center justify-center space-x-2"
+          >
+            <span>Shop Now</span>
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+          <Link
+            to="/partner"
+            className="px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-gray-900 transition-all flex items-center justify-center"
+          >
+            Become a Partner
+          </Link>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-3 gap-4 pt-6">
+          {[
+            { value: '500+', label: 'Stores' },
+            { value: '10K+', label: 'Happy Customers' },
+            { value: '15 min', label: 'Avg Delivery' }
+          ].map((stat, idx) => (
+            <div key={idx} className="text-center">
+              <div className="text-3xl font-bold">{stat.value}</div>
+              <div className="text-sm text-white/80 mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Hero Image / Illustration */}
+<div className="relative hidden md:flex justify-center">
+  <div className="
+       absolute bottom-0 
+       bg-white/20 backdrop-blur-xl 
+       rounded-3xl p-12 md:p-16 
+       shadow-2xl 
+       transform rotate-6 hover:rotate-0 
+       transition-transform duration-500 
+       w-72 md:w-96 
+       overflow-hidden
+       ">
+    <img
+      src="/Users/apple/Desktop/Qlo_Website/qlo_website_1/public/fashion.jpeg"
+      alt="Fashion Illustration"
+      className="w-full h-auto object-cover"
+    />
+    {/* Optional accent: floating circle or gradient blob */}
+    <div className="absolute -top-6 -right-6 w-24 h-24 bg-yellow-300/40 rounded-full mix-blend-multiply animate-pulse-slow"></div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  {/* Decorative Overlap for next section */}
+  <div className="absolute bottom-0 w-full h-20 md:h-32 bg-gradient-to-t from-white/95 to-transparent dark:from-gray-900/95 z-0 pointer-events-none"> </div>
+</section>
+
 
       {/* Compact Category Filter Bar */}
-      <section className="py-8 bg-white border-b border-gray-100 sticky top-20 z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-bold text-gray-900">Shop by Category</h2>
-            <Link to="" className="text-red-500 hover:text-red-600 font-semibold text-sm flex items-center space-x-1">
-              <span>View All</span>
-              <ChevronRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="flex items-center space-x-3 overflow-x-auto pb-2 scrollbar-hide">
-            {categories.map((cat, idx) => (
-              <button
-                key={idx}
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-6 py-2.5 rounded-full font-semibold whitespace-nowrap transition ${selectedCategory === cat
-                    ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      
+<section className="py-8 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 backdrop-blur-sm bg-white/95 dark:bg-gray-900/95 transition-colors duration-300">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-between mb-4">
+      <h2 className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300">Shop by Category</h2>
+      <Link to="" className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-500 font-semibold text-sm flex items-center space-x-1 transition-colors duration-200">
+        <span>View All</span>
+        <ChevronRight className="w-4 h-4" />
+      </Link>
+    </div>
+    <div className="flex items-center space-x-3 overflow-x-auto pb-2 scrollbar-hide">
+      {categories.map((cat, idx) => (
+        <button
+          key={idx}
+          onClick={() => setSelectedCategory(cat)}
+          className={`px-6 py-2.5 rounded-full font-semibold whitespace-nowrap transition-all duration-200 ${selectedCategory === cat
+              ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-lg scale-105'
+              : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+            }`}
+        >
+          {cat}
+        </button>
+      ))}
+    </div>
+  </div>
+</section>
 
 
       {/* Featured Stores Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-8">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Stores Near You</h2>
-              <p className="text-gray-600">Discover local fashion boutiques delivering in minutes</p>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300">Stores Near You</h2>
+              <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">Discover local fashion boutiques delivering in minutes</p>
             </div>
-            <button className="hidden md:flex items-center space-x-2 px-6 py-3 bg-white border-2 border-gray-200 text-gray-900 rounded-xl hover:border-red-500 hover:text-red-500 transition font-semibold">
+            <button className="hidden md:flex items-center space-x-2 px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-xl hover:border-red-500 dark:hover:border-red-400 hover:text-red-500 dark:hover:text-red-400 hover:scale-105 transition-all duration-200 font-semibold">
               <MapPin className="w-5 h-5" />
               <span>Change Location</span>
             </button>
@@ -199,7 +281,7 @@ const HomePage = () => {
             {stores.map((store) => (
               <div
                 key={store.id}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group border border-gray-100"
+                className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group border border-gray-100 dark:border-gray-700"
               >
                 {/* Store Image */}
                 <div className="relative h-48 overflow-hidden">
@@ -211,14 +293,14 @@ const HomePage = () => {
                   {/* Status Badge */}
                   <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold ${store.isOpen
                       ? 'bg-green-500 text-white'
-                      : 'bg-gray-800 text-white'
+                      : 'bg-gray-800 dark:bg-gray-600 text-white'
                     }`}>
                     {store.isOpen ? 'Open Now' : 'Closed'}
                   </div>
                   {/* Distance Badge */}
-                  <div className="absolute bottom-3 left-3 bg-white bg-opacity-95 px-3 py-1.5 rounded-lg flex items-center space-x-1 shadow-md">
-                    <MapPin className="w-4 h-4 text-red-500" />
-                    <span className="text-sm font-semibold text-gray-900">{store.distance}</span>
+                  <div className="absolute bottom-3 left-3 bg-white dark:bg-gray-800 bg-opacity-95 dark:bg-opacity-95 px-3 py-1.5 rounded-lg flex items-center space-x-1 shadow-md">
+                    <MapPin className="w-4 h-4 text-red-500 dark:text-red-400" />
+                    <span className="text-sm font-semibold text-gray-900 dark:text-white">{store.distance}</span>
                   </div>
                 </div>
 
@@ -226,14 +308,14 @@ const HomePage = () => {
                 <div className="p-5">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-red-500 transition">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-red-500 dark:group-hover:text-red-400 transition-colors duration-200">
                         {store.name}
                       </h3>
-                      <p className="text-sm text-gray-600">{store.address}</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">{store.address}</p>
                     </div>
-                    <div className="flex items-center space-x-1 bg-yellow-50 px-2.5 py-1 rounded-lg">
+                    <div className="flex items-center space-x-1 bg-yellow-50 dark:bg-yellow-900/30 px-2.5 py-1 rounded-lg">
                       <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-bold text-gray-900">{store.rating}</span>
+                      <span className="text-sm font-bold text-gray-900 dark:text-white">{store.rating}</span>
                     </div>
                   </div>
 
@@ -242,7 +324,7 @@ const HomePage = () => {
                     {store.categories.map((cat, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-semibold"
+                        className="px-3 py-1 bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded-full text-xs font-semibold"
                       >
                         {cat}
                       </span>
@@ -250,12 +332,12 @@ const HomePage = () => {
                   </div>
 
                   {/* Delivery Time */}
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
                     <div className="flex items-center space-x-2">
-                      <Clock className="w-4 h-4 text-red-500" />
-                      <span className="text-sm font-semibold text-gray-900">Delivery in {store.time}</span>
+                      <Clock className="w-4 h-4 text-red-500 dark:text-red-400" />
+                      <span className="text-sm font-semibold text-gray-900 dark:text-white">Delivery in {store.time}</span>
                     </div>
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-red-500 transition" />
+                    <ChevronRight className="w-5 h-5 text-gray-400 dark:text-gray-500 group-hover:text-red-500 dark:group-hover:text-red-400 transition-colors duration-200" />
                   </div>
                 </div>
               </div>
@@ -264,7 +346,7 @@ const HomePage = () => {
 
           {/* View All Stores Button */}
           <div className="text-center mt-10">
-            <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:shadow-lg transition font-semibold inline-flex items-center space-x-2">
+            <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200 font-semibold inline-flex items-center space-x-2">
               <span>View All Stores</span>
               <ArrowRight className="w-5 h-5" />
             </button>
@@ -273,21 +355,21 @@ const HomePage = () => {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose FashionFlash?</h2>
-            <p className="text-gray-600 text-lg">Fast, reliable, and trusted by thousands</p>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">Why Choose FashionFlash?</h2>
+            <p className="text-gray-600 dark:text-gray-400 text-lg transition-colors duration-300">Fast, reliable, and trusted by thousands</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, idx) => (
-              <div key={idx} className="group relative bg-gray-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+              <div key={idx} className="group relative bg-gray-50 dark:bg-gray-800 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:scale-105">
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition shadow-lg`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 transition-colors duration-300">{feature.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed transition-colors duration-300">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -304,13 +386,13 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-white text-red-500 rounded-xl hover:scale-105 transition font-semibold"
+              className="px-8 py-4 bg-white text-red-500 rounded-xl hover:scale-105 transition-all duration-200 font-semibold"
             >
               Contact Us
             </Link>
             <Link
               to="/partner"
-              className="px-8 py-4 bg-white bg-opacity-20 border-2 border-white text-white rounded-xl hover:bg-opacity-30 transition font-semibold"
+              className="px-8 py-4 bg-white bg-opacity-20 border-2 border-white text-white rounded-xl hover:bg-opacity-30 hover:scale-105 transition-all duration-200 font-semibold"
             >
               Become a Partner
             </Link>
