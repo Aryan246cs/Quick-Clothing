@@ -41,15 +41,18 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-6">
             <Link to="/" className="text-gray-700 hover:text-red-500 font-medium transition">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-red-500 font-medium transition">
-              About
+            <Link to="/features" className="text-gray-700 hover:text-red-500 font-medium transition">
+              Features
             </Link>
             <Link to="/how-it-works" className="text-gray-700 hover:text-red-500 font-medium transition">
               How It Works
+            </Link>
+            <Link to="/faq" className="text-gray-700 hover:text-red-500 font-medium transition">
+              FAQ
             </Link>
             <Link to="/partner" className="text-gray-700 hover:text-red-500 font-medium transition">
               Partner
@@ -61,7 +64,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+            className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -70,15 +73,18 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-3 border-t border-gray-100">
+          <div className="lg:hidden py-4 space-y-3 border-t border-gray-100">
             <Link to="/" className="block text-gray-700 hover:text-red-500 py-2">
               Home
             </Link>
-            <Link to="/about" className="block text-gray-700 hover:text-red-500 py-2">
-              About
+            <Link to="/features" className="block text-gray-700 hover:text-red-500 py-2">
+              Features
             </Link>
             <Link to="/how-it-works" className="block text-gray-700 hover:text-red-500 py-2">
               How It Works
+            </Link>
+            <Link to="/faq" className="block text-gray-700 hover:text-red-500 py-2">
+              FAQ
             </Link>
             <Link to="/partner" className="block text-gray-700 hover:text-red-500 py-2">
               Partner With Us

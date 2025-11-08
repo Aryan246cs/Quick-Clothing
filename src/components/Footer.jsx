@@ -41,6 +41,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/features" className="text-gray-400 hover:text-white transition">
+                  Features
+                </Link>
+              </li>
+              <li>
                 <Link to="/how-it-works" className="text-gray-400 hover:text-white transition">
                   How It Works
                 </Link>
@@ -55,18 +60,23 @@ const Footer = () => {
                   Blog
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition">
-                  Press
-                </a>
-              </li>
             </ul>
           </div>
 
-          {/* For You Links */}
+          {/* Support Links */}
           <div>
-            <h3 className="font-bold text-lg mb-4">For You</h3>
+            <h3 className="font-bold text-lg mb-4">Support</h3>
             <ul className="space-y-3">
+              <li>
+                <Link to="/faq" className="text-gray-400 hover:text-white transition">
+                  FAQs
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-400 hover:text-white transition">
+                  Contact Us
+                </Link>
+              </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition">
                   Privacy Policy
@@ -79,17 +89,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition">
-                  FAQs
-                </a>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white transition">
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition">
-                  Sitemap
+                  Refund Policy
                 </a>
               </li>
             </ul>
@@ -101,7 +101,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link to="/partner" className="text-gray-400 hover:text-white transition">
-                  Partner with Us
+                  Register Store
                 </Link>
               </li>
               <li>
@@ -116,7 +116,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition">
-                  Logistics
+                  Seller Dashboard
                 </a>
               </li>
             </ul>
@@ -129,10 +129,10 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">© 2025 FashionFlash. All rights reserved.</p>
             <div className="flex items-center space-x-6">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition">
-                Privacy Policy
+                Privacy
               </a>
               <a href="#" className="text-gray-400 hover:text-white text-sm transition">
-                Terms of Service
+                Terms
               </a>
               <a href="#" className="text-gray-400 hover:text-white text-sm transition">
                 Sitemap
