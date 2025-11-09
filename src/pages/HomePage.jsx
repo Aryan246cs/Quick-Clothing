@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Zap, Store, Shield, Award, ArrowRight, MapPin, Clock, Star, ChevronRight } from 'lucide-react';
+import { Zap, Store, Shield, Award, ArrowRight, MapPin, Clock, Star, ChevronRight, Sparkles, ShoppingBag } from 'lucide-react';
 import { Link } from '../utils/Router';
 
 const HomePage = () => {
@@ -87,184 +87,158 @@ const HomePage = () => {
 
   return (
     <>
-      {/* Hero Section
-      <section className="relative overflow-hidden bg-gradient-to-br from-red-50 via-white to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* Hero Section - Full height, sticky, slides under next sections */}
+      <section className="relative h-screen bg-gradient-to-br from-red-500 via-pink-500 to-purple-600 dark:from-red-700 dark:via-pink-700 dark:to-purple-800 text-white overflow-hidden">
+        {/* Animated Background Blobs */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400/30 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute top-40 right-20 w-96 h-96 bg-pink-400/30 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-purple-400/30 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center w-full">
+            {/* Left Content */}
             <div className="space-y-8">
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-md border border-red-100 dark:border-gray-700 transition-colors duration-300">
-                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Delivering Fashion Since 2025</span>
+              <div className="inline-flex items-center space-x-3 bg-white/20 backdrop-blur-lg px-5 py-2.5 rounded-full border border-white/30 shadow-lg">
+                <Sparkles className="w-5 h-5 text-yellow-300 animate-pulse" />
+                <span className="font-semibold text-white">India's Fastest Fashion Delivery</span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                <span className="text-gray-900 dark:text-white transition-colors duration-300">Fashion at</span>
-                <br />
-                <span className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
-                  Lightning Speed
+              <h1 className="text-6xl md:text-7xl font-black leading-tight">
+                <span className="block text-white">Fashion in</span>
+                <span className="block mt-2 bg-gradient-to-r from-yellow-300 via-yellow-200 to-white bg-clip-text text-transparent animate-gradient">
+                  20 Minutes
                 </span>
               </h1>
 
-              <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed transition-colors duration-300">
-                Get your favorite clothes from neighborhood stores delivered to your doorstep in just <span className="font-bold text-red-500 dark:text-red-400">20 minutes</span>.
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-light">
+                Your neighborhood stores, now at your fingertips.
+                <span className="block mt-2 font-semibold text-yellow-300">Shop local, get it fast.</span>
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link
                   to="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200 font-semibold text-center flex items-center justify-center space-x-2"
+                  className="group px-8 py-4 bg-yellow-400 text-gray-900 font-bold rounded-2xl shadow-2xl hover:shadow-yellow-400/50 hover:scale-105 transition-all flex items-center justify-center space-x-2"
                 >
-                  <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ShoppingBag className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  <span>Start Shopping</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/partner"
-                  className="px-8 py-4 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-xl hover:border-red-500 dark:hover:border-red-400 hover:scale-105 transition-all duration-200 font-semibold text-center"
+                  className="px-8 py-4 bg-white/10 backdrop-blur-md border-2 border-white/50 text-white font-bold rounded-2xl hover:bg-white hover:text-gray-900 transition-all flex items-center justify-center"
                 >
                   Partner With Us
                 </Link>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 pt-4">
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6 pt-8">
                 {[
-                  { value: '500+', label: 'Partner Stores' },
-                  { value: '10K+', label: 'Happy Customers' },
-                  { value: '15 min', label: 'Avg Delivery' }
+                  { value: '500+', label: 'Local Stores', icon: '🏪' },
+                  { value: '10K+', label: 'Happy Customers', icon: '😊' },
+                  { value: '15 min', label: 'Avg Delivery', icon: '⚡' }
                 ].map((stat, idx) => (
-                  <div key={idx} className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">{stat.value}</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mt-1 transition-colors duration-300">{stat.label}</div>
+                  <div key={idx} className="text-center group cursor-pointer">
+                    <div className="text-5xl mb-2 group-hover:scale-125 transition-transform">{stat.icon}</div>
+                    <div className="text-3xl md:text-4xl font-black text-white">{stat.value}</div>
+                    <div className="text-sm text-white/80 mt-1 font-medium">{stat.label}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="relative hidden md:block">
-              <div className="relative bg-gradient-to-br from-red-400 via-pink-400 to-purple-400 rounded-3xl p-12 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="relative text-center">
-                  <div className="text-9xl mb-4">👕</div>
-                  <div className="text-white text-2xl font-bold">Shop Now</div>
+            {/* Right - Enhanced Image Card */}
+            <div className="relative hidden md:flex justify-center items-center">
+              {/* Main Image Container */}
+              <div className="relative group">
+                {/* Glowing Background Effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-pink-500 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity"></div>
+
+                {/* Image Card */}
+                <div className="relative bg-white/10 backdrop-blur-2xl rounded-3xl p-3 shadow-2xl transform hover:scale-105 transition-all duration-500 border border-white/20">
+                  <div className="relative overflow-hidden rounded-2xl aspect-[3/4] w-80">
+                    <img
+                      src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&h=700&fit=crop&q=80"
+                      alt="Fashion Shopping"
+                      className="w-full h-full object-cover"
+                    />
+
+                    {/* Overlay Gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+                    {/* Floating Badge - Top */}
+                    <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-xl flex items-center space-x-2 animate-bounce-slow">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-bold text-gray-900">Shop Now</span>
+                    </div>
+
+                    {/* Floating Badge - Bottom */}
+                    <div className="absolute bottom-4 left-4 bg-yellow-400 px-4 py-2 rounded-full shadow-xl">
+                      <span className="text-sm font-black text-gray-900">⚡ 20 Min Delivery</span>
+                    </div>
+                  </div>
                 </div>
+
+                {/* Decorative Elements */}
+                <div className="absolute -top-4 -left-4 w-24 h-24 bg-yellow-300/40 rounded-full blur-xl animate-pulse"></div>
+                <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-pink-400/40 rounded-full blur-xl animate-pulse animation-delay-2000"></div>
               </div>
             </div>
           </div>
         </div>
-      </section> */}
 
-      {/* Hero Section */}
-<section className="relative bg-gradient-to-br from-red-500 via-pink-500 to-purple-600 text-white overflow-hidden">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-      {/* Text Content */}
-      <div className="space-y-6">
-        <div className="inline-flex items-center space-x-3 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full">
-          <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
-          <span className="font-semibold text-white">Delivering Fashion at Lightning Speed</span>
-        </div>
+        {/* Bottom Fade Overlay */}
+        <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-white dark:from-gray-900 to-transparent pointer-events-none"></div>
+      </section>
+      {/* Category Filter Section */}
+      <section className="py-12 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-          <span className="block">Your Fashion,</span>
-          <span className="block bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-red-400 to-pink-500">
-            Delivered Instantly
-          </span>
-        </h1>
-
-        <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-          Get your favorite outfits from local stores in just{" "}
-          <span className="font-bold text-yellow-300">20 minutes</span>. Style delivered, no waiting.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            to="/shop"
-            className="px-8 py-4 bg-yellow-400 text-gray-900 font-semibold rounded-xl shadow-lg hover:scale-105 transition-transform flex items-center justify-center space-x-2"
-          >
-            <span>Shop Now</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-          <Link
-            to="/partner"
-            className="px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-gray-900 transition-all flex items-center justify-center"
-          >
-            Become a Partner
-          </Link>
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-3 gap-4 pt-6">
-          {[
-            { value: '500+', label: 'Stores' },
-            { value: '10K+', label: 'Happy Customers' },
-            { value: '15 min', label: 'Avg Delivery' }
-          ].map((stat, idx) => (
-            <div key={idx} className="text-center">
-              <div className="text-3xl font-bold">{stat.value}</div>
-              <div className="text-sm text-white/80 mt-1">{stat.label}</div>
+          {/* Heading + View All */}
+          <div className="flex justify-between items-center mb-6">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-1 transition-colors duration-300">
+                Shop by Category
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base transition-colors duration-300">
+                Browse trendy collections curated for every mood and moment
+              </p>
             </div>
-          ))}
+            <Link
+              to=""
+              className="hidden md:flex items-center space-x-2 px-5 py-2.5 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-xl hover:border-red-500 dark:hover:border-red-400 hover:text-red-500 dark:hover:text-red-400 hover:scale-105 transition-all duration-200 font-semibold text-sm"
+            >
+              <span>View All</span>
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Category Buttons */}
+          <div className="flex flex-wrap gap-3 overflow-x-auto pb-3 scrollbar-hide">
+            {categories.map((cat, idx) => (
+              <button
+                key={idx}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-5 py-2.5 rounded-lg font-semibold text-sm whitespace-nowrap transition-all duration-200 border ${selectedCategory === cat
+                    ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white border-transparent shadow-md scale-105'
+                    : 'bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:border-red-400 hover:text-red-500 dark:hover:text-red-400'
+                  }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
         </div>
-      </div>
+      </section>
 
-      {/* Hero Image / Illustration */}
-<div className="relative hidden md:flex justify-center">
-  <div className="
-       absolute bottom-0 
-       bg-white/20 backdrop-blur-xl 
-       rounded-3xl p-12 md:p-16 
-       shadow-2xl 
-       transform rotate-6 hover:rotate-0 
-       transition-transform duration-500 
-       w-72 md:w-96 
-       overflow-hidden
-       ">
-    <img
-      src="/Users/apple/Desktop/Qlo_Website/qlo_website_1/public/fashion.jpeg"
-      alt="Fashion Illustration"
-      className="w-full h-auto object-cover"
-    />
-    {/* Optional accent: floating circle or gradient blob */}
-    <div className="absolute -top-6 -right-6 w-24 h-24 bg-yellow-300/40 rounded-full mix-blend-multiply animate-pulse-slow"></div>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-  {/* Decorative Overlap for next section */}
-  <div className="absolute bottom-0 w-full h-20 md:h-32 bg-gradient-to-t from-white/95 to-transparent dark:from-gray-900/95 z-0 pointer-events-none"> </div>
-</section>
-
-
-      {/* Compact Category Filter Bar */}
-<section className="py-8 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 backdrop-blur-sm bg-white/95 dark:bg-gray-900/95 transition-colors duration-300">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex items-center justify-between mb-4">
-      <h2 className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300">Shop by Category</h2>
-      <Link to="" className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-500 font-semibold text-sm flex items-center space-x-1 transition-colors duration-200">
-        <span>View All</span>
-        <ChevronRight className="w-4 h-4" />
-      </Link>
-    </div>
-    <div className="flex items-center space-x-3 overflow-x-auto pb-2 scrollbar-hide">
-      {categories.map((cat, idx) => (
-        <button
-          key={idx}
-          onClick={() => setSelectedCategory(cat)}
-          className={`px-6 py-2.5 rounded-full font-semibold whitespace-nowrap transition-all duration-200 ${selectedCategory === cat
-              ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-lg scale-105'
-              : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-            }`}
-        >
-          {cat}
-        </button>
-      ))}
-    </div>
-  </div>
-</section>
 
 
       {/* Featured Stores Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
+      <section className="pb-12 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-8">
             <div>
@@ -292,8 +266,8 @@ const HomePage = () => {
                   />
                   {/* Status Badge */}
                   <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold ${store.isOpen
-                      ? 'bg-green-500 text-white'
-                      : 'bg-gray-800 dark:bg-gray-600 text-white'
+                    ? 'bg-green-500 text-white'
+                    : 'bg-gray-800 dark:bg-gray-600 text-white'
                     }`}>
                     {store.isOpen ? 'Open Now' : 'Closed'}
                   </div>
@@ -355,26 +329,45 @@ const HomePage = () => {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">Why Choose FashionFlash?</h2>
-            <p className="text-gray-600 dark:text-gray-400 text-lg transition-colors duration-300">Fast, reliable, and trusted by thousands</p>
+<section className="py-14 bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    {/* Section Heading */}
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
+        Why Choose <span className="text-pink-600 dark:text-pink-400">FashionFlash?</span>
+      </h2>
+      <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg">
+        Fast, reliable, and trusted by thousands of shoppers
+      </p>
+    </div>
+
+    {/* Feature Cards */}
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      {features.map((feature, idx) => (
+        <div
+          key={idx}
+          className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-gray-100 dark:border-gray-700 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+        >
+          {/* Accent Badge */}
+          <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-14 h-14 bg-gradient-to-br from-pink-500 to-red-400 dark:from-pink-600 dark:to-red-500 rounded-2xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+            <feature.icon className="w-7 h-7 text-white" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, idx) => (
-              <div key={idx} className="group relative bg-gray-50 dark:bg-gray-800 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:scale-105">
-                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition shadow-lg`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 transition-colors duration-300">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed transition-colors duration-300">{feature.desc}</p>
-              </div>
-            ))}
+          {/* Card Content */}
+          <div className="pt-10 text-center">
+            <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              {feature.title}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base leading-relaxed">
+              {feature.desc}
+            </p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-red-500 via-pink-500 to-purple-500">
